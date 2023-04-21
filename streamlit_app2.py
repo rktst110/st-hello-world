@@ -1,5 +1,9 @@
 import streamlit as st
+from test import main
 
-# Let's see what we got!
-st.write("The id is:")
+st.write('Hello world!')
+st.write('this is main page')
+st.write('this is a change')
 
+
+main()
