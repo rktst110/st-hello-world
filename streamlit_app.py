@@ -26,23 +26,12 @@ st.write("The contents are: ", doc.to_dict())
 '''
 
 
+doc_ref = db.collection("April 2023").document("13 April 2023")
 
-# Define function to print all data in a collection and its subcollections
-def print_collection(collection_ref, indent=0):
-    # Iterate over documents in the collection
-    for doc in collection_ref.stream():
-        # Print document ID and data
-        st.write(" " * indent + f"Document ID: {doc.id}")
-        st.write(" " * indent + f"Document data: {doc.to_dict()}")
+# List all subcollections of the document
+subcollections = doc_ref.list_collections()
 
-        # Iterate over subcollections in the document
-        for subcollection in doc.collections():
-            # Print subcollection ID
-            st.write(" " * indent + f"Subcollection ID: {subcollection.id}")
+# Iterate over subcollections and print their IDs
+for subcollection in subcollections:
+    print(f"Subcollection ID: {subcollection.id}")
 
-            # Recursively print all data in the subcollection
-            print_collection(subcollection, indent + 4)
-
-# Print all data in the "posts" collection
-collection_ref = db.collection("April 2023")
-print_collection(collection_ref)
