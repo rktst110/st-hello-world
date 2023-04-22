@@ -44,7 +44,8 @@ doc_ref = db.collection("Test").document("DocTest")
 #doc_ref = db.collection("April 2023").document("13 April 2023")
 
 # List all subcollections of the document
-subcollections = doc_ref.list_collections()
+#subcollections = doc_ref.list_collections()
+subcollections = db.collection_group(doc_ref.id)
 
 # Iterate over subcollections and print their IDs
 for subcollection in subcollections:
