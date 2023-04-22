@@ -31,6 +31,6 @@ st.write("testing through dev neqw")
 #docs = db.collection("Test").document("DocTest")
 
 docs = db.collection('Test').stream()
-
+st.write(docs)
 for doc in docs:
     print('{doc.id} => {doc.to_dict()}')
