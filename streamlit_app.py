@@ -25,8 +25,10 @@ st.write("The id is: ", doc.id)
 st.write("The contents are: ", doc.to_dict())
 """
 
+st.write("testing through dev")
 
-doc_ref = db.collection("April 2023").document("13 April 2023")
+#doc_ref = db.collection("April 2023").document("13 April 2023")
+doc_ref = db.collection("Test").document("DocTest")
 
 # List all subcollections of the document
 subcollections = doc_ref.list_collections()
