@@ -39,7 +39,8 @@ for doc in docs:
 '''
 
 
-collections = db.collection("Test").document("DocTest").collections()
+#collections = db.collection("Test").document("DocTest").collections()
+collections = db.collection("Test").collections()
 #st.write(collections)
 for collection in collections:
     #st.write(collection)
