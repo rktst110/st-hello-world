@@ -40,12 +40,13 @@ for doc in docs:
 
 
 collections = db.collection("Test").document("DocTest").collections()
-st.write(collections)
+#st.write(collections)
 for collection in collections:
-    st.write(collection)
+    #st.write(collection)
     for doc in collection.stream():
-        st.write(doc.id)
-        print(f"{doc.id} => {doc.to_dict()}")
+        st.write("The id is: ", doc.id)
+        st.write("The contents are: ", doc.to_dict())
+   
 
 
 
