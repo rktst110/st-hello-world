@@ -35,7 +35,7 @@ docs = db.collection('Test').stream()
       
 #st.write(docs)
 for doc in docs:
-    st.write({doc.id} => {doc.to_dict()})
+    st.write(doc.id, doc.to_dict())
 
 
 
