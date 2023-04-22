@@ -30,8 +30,10 @@ st.write("testing through dev neqw")
 #doc_ref = db.collection("April 2023").document("13 April 2023")
 #docs = db.collection("Test").document("DocTest")
 
-docs = db.collection(u'Test').stream()
+fdfdf
+
+docs = db.collection('Test').stream()
 
 for doc in docs:
-    print(f'{doc.id} => {doc.to_dict()}')snippets.py
+    print(f'{doc.id} => {doc.to_dict()}')
 
