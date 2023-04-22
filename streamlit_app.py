@@ -46,7 +46,7 @@ doc_ref = db.collection("Test").document("DocTest")
 # List all subcollections of the document
 #subcollections = doc_ref.list_collections()
 subcollections = db.collection_group(doc_ref.id)
-
+st.write(subcollections)
 # Iterate over subcollections and print their IDs
 for subcollection in subcollections:
     st.write("Subcollection ID: ", subcollection.id)
