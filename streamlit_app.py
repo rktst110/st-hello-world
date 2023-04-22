@@ -44,7 +44,7 @@ st.write(collections)
 for collection in collections:
     st.write(collection)
     for doc in collection.stream():
-        st.write(doc)
+        st.write(doc.id)
         print(f"{doc.id} => {doc.to_dict()}")
 
 
