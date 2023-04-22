@@ -28,12 +28,10 @@ st.write("The contents are: ", doc.to_dict())
 st.write("testing through dev neqw")
 
 #doc_ref = db.collection("April 2023").document("13 April 2023")
-doc_ref = db.collection("Test").document("DocTest")
+#docs = db.collection("Test").document("DocTest")
 
-# List all subcollections of the document
-subcollections = doc_ref.list_collections()
+docs = db.collection(u'Test').stream()
 
-# Iterate over subcollections and print their IDs
-for subcollection in subcollections:
-    print(f"Subcollection ID: {subcollection.id}")
+for doc in docs:
+    print(f'{doc.id} => {doc.to_dict()}')snippets.py
 
