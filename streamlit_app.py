@@ -52,4 +52,12 @@ for collection in collections:
 
 
 
-    
+doc_ref = db.collection("April 2023").document("13 April 2023")
+
+# List all subcollections of the document
+subcollections = doc_ref.list_collections()
+
+# Iterate over subcollections and print their IDs
+for subcollection in subcollections:
+    st.write("Subcollection ID: ", subcollection.id)
+
