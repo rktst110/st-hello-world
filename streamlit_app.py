@@ -40,18 +40,6 @@ for doc in docs:
 
 
 
-#collections = db.collection("Test").document("DocTest").collections()
-collections = db.collection("Test").collections()
-#st.write(collections)
-for collection in collections:
-    #st.write(collection)
-    for doc in collection.stream():
-        st.write("The id is: ", doc.id)
-        st.write("The contents are: ", doc.to_dict())
-   
-
-
-
 doc_ref = db.collection("April 2023").document("13 April 2023")
 
 # List all subcollections of the document
@@ -60,4 +48,16 @@ subcollections = doc_ref.list_collections()
 # Iterate over subcollections and print their IDs
 for subcollection in subcollections:
     st.write("Subcollection ID: ", subcollection.id)
+
+
+
+#collections = db.collection("Test").document("DocTest").collections()
+collections = db.collection("Test").collections()
+#st.write(collections)
+for collection in collections:
+    #st.write(collection)
+    for doc in collection.stream():
+        st.write(doc.id, doc.to_dict())
+   
+
 
