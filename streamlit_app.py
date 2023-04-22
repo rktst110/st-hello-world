@@ -42,7 +42,9 @@ for doc in docs:
 collections = db.collection("Test").document("DocTest").collections()
 st.write(collections)
 for collection in collections:
+    st.write(collection)
     for doc in collection.stream():
+        st.write(doc)
         print(f"{doc.id} => {doc.to_dict()}")
 
 
