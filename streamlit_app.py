@@ -32,15 +32,19 @@ st.write("testing through dev neqw")
 
 docs = db.collection('Test').stream()
 
-collections = db.collection("Test").document("DocTest").collections()
-for collection in collections:
-    for doc in collection.stream():
-        print(f"{doc.id} => {doc.to_dict()}")
-
 '''        
 st.write(docs)
 for doc in docs:
     print('{doc.id} => {doc.to_dict()}')
 '''
+
+
+collections = db.collection("Test").document("DocTest").collections()
+st.write(collections)
+for collection in collections:
+    for doc in collection.stream():
+        print(f"{doc.id} => {doc.to_dict()}")
+
+
 
     
