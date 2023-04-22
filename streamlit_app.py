@@ -40,8 +40,8 @@ for doc in docs:
 
 '''
 
-
-doc_ref = db.collection("April 2023").document("13 April 2023")
+doc_ref = db.collection("Test").document("DocTest")
+#doc_ref = db.collection("April 2023").document("13 April 2023")
 
 # List all subcollections of the document
 subcollections = doc_ref.list_collections()
