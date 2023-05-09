@@ -1,5 +1,6 @@
 import streamlit as st
-from test import main
+#from test import main
+from navigation import main
 from google.cloud import firestore
 
 st.write('Hello world!')
